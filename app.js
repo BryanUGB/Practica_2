@@ -62,10 +62,10 @@ function findIndex(elem){
     var i, len = items.length;
     for(i=0; i<len; i++){
         if (items[i]===elem){
-            return i 
+            return i; 
         }
     }
-    return -1
+    return -1;
 };
 
 //optener index de los elementos de la lista 
