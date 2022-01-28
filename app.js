@@ -33,6 +33,21 @@ addItemButton.addEventListener('click',() =>{
     addItemInput.value="";
 });
 
+//eliminar elementos selccionado
+
+removeItem.addEventListener('click', () =>{
+let showDiv = document.getElementById('list');
+let divAlert = document.createElement('div');
+let label = document.createElement('label');
+label.innerHTML='Se elimino  el elemento'+ index;
+divAlert.classList.add('alert', 'alert danger');// clase de la alerta
+
+
+items[index].parentNode.removeChild(items[index]);
+divAlert.appendChild(label)
+showDiv.appendChild(divAlert)
+});
+
 
 // eliminar ultimo elemnto de la lista
 
