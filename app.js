@@ -23,3 +23,23 @@ hide.addEventListener('click', () =>{
     }
 });
 
+
+//agregar elementos a la lista
+addItemButton.addEventListener('click',() =>{
+    let list = document.querySelector('ul');
+    let li = document.createElement('li');
+    li.textContent = addItemInput.value;
+    list.appendChild(li); // agregar elemento a la lista
+    addItemInput.value="";
+});
+
+
+// eliminar ultimo elemnto de la lista
+
+removeItemButton.addEventListener('click', () =>{
+    let list = document.querySelector('ul');
+    let li = document.querySelector('li:last-child');
+    list.removeChild(li)
+});
+
+
