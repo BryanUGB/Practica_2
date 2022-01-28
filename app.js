@@ -42,4 +42,31 @@ removeItemButton.addEventListener('click', () =>{
     list.removeChild(li)
 });
 
+//optener index de elementos seleccionados 
+function findIndex(elem){
+    var i, len = items.length;
+    for(i=0; i<len; i++){
+        if (items[i]===elem){
+            return i 
+        }
+    }
+    return -1
+};
 
+//optener index de los elementos de la lista 
+ var list = document.getElementById("listItems"),
+ items = list.getElementsByTagName("li");
+ list.onclick = function(e) {
+     var event= e |  window.event,
+     src = event.target || event.srcElement;
+     var myIndex = findIndex(src);
+     //alert (myIndex);
+     index=myIndex;
+     console.log(myIndex);
+
+     //cambiar el color del elemento seleccionado
+     if(event.target.tagName === 'LI'){
+         list.querySelectorAll('li').forEach(el=>el.classList.remove('alert', 'alert-success'));//clases de boostrap agregadas
+         items[index].classList.add('alert', 'alert-success');
+     }
+ };
