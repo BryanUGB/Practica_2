@@ -59,7 +59,7 @@ function findIndex(elem){
  var list = document.getElementById("listItems"),
  items = list.getElementsByTagName("li");
  list.onclick = function(e) {
-     var event= e |  window.event,
+     var event= e ||  window.event,
      src = event.target || event.srcElement;
      var myIndex = findIndex(src);
      //alert (myIndex);
