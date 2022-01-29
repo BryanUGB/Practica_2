@@ -10,7 +10,7 @@ const addItemButton= document.querySelector('button#addItemButton'); //button
 const removeItemButton = document.querySelector('button#removeItemButton');
 
 //eliminar elemento seleccionado
-const removeItem = document.querySelector('button#removeItem')
+const removeItem = document.querySelector('button#removeItem');
 
 //mostrar y ocultar lista 
 hide.addEventListener('click', () =>{
@@ -18,7 +18,7 @@ hide.addEventListener('click', () =>{
         listDiv.style.display = 'block';
         hide.textContent= '<<';
     } else{
-        listDiv.style.display = 'none'
+        listDiv.style.display = 'none';
         hide.textContent ='>>';
     }
 });
