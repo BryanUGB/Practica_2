@@ -40,7 +40,7 @@ addItemButton.addEventListener('click',() =>{
 removeItemButton.addEventListener('click', () =>{
     let list = document.querySelector('ul');
     let li = document.querySelector('li:last-child');
-    list.removeChild(li)
+    list.removeChild(li);
 });
 
 
